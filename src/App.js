@@ -44,6 +44,24 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      <Container>
+        <Row>
+          <Col xs={12} md={3}>
+            <h5>Categories</h5>
+            <Nav className="flex-column">
+              <Nav.Link>world</Nav.Link>
+              <Nav.Link>business</Nav.Link>
+              <Nav.Link>sports</Nav.Link>
+              <Nav.Link>technology</Nav.Link>
+              <Nav.Link>entertainment</Nav.Link>
+            </Nav>   
+          </Col>
+          <Col xs={12} md={9}>
+            News
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }
