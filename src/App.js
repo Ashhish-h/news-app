@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   Row,
   Col,
@@ -24,7 +26,7 @@ function App() {
 
   return (
     <>
-      <Navbar bg="light" expand="lg" clasName="mb-4">
+      <Navbar bg="light" expand="lg" className="mb-4">
         <Container>
           <Navbar.Brand href="/" className="fw-bold fs-4">News-App</Navbar.Brand>
 
