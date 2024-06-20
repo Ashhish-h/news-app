@@ -74,11 +74,15 @@ function App() {
           <Col xs={12} md={3}>
             <h5>Categories</h5>
             <Nav className="flex-column">
-              <Nav.Link>world</Nav.Link>
-              <Nav.Link>business</Nav.Link>
-              <Nav.Link>sports</Nav.Link>
-              <Nav.Link>technology</Nav.Link>
-              <Nav.Link>entertainment</Nav.Link>
+              <Nav.Link onClick={() => handleCategoryClick("world")}>world</Nav.Link>
+
+              <Nav.Link onClick={() => handleCategoryClick("business")}>business</Nav.Link>
+
+              <Nav.Link onClick={() => handleCategoryClick("technology")}>technology</Nav.Link>
+
+              <Nav.Link onClick={() => handleCategoryClick("sports")}>sports</Nav.Link>
+
+              <Nav.Link onClick={() => handleCategoryClick("entertainment")}>entertainment</Nav.Link>
             </Nav>   
           </Col>
           <Col xs={12} md={9}>
