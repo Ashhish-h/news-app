@@ -8,7 +8,7 @@ const NewsList = (props) =>{
     const [currentPage, setCurrentPage] = useState(1);
     const pageSize = 4;
 
-    const handleClick = (pageNumber) => setCurrentPage(pageNumber);
+    const onPageChange = (pageNumber) => setCurrentPage(pageNumber);
 
     const {newsData, loading, error} = useNewsData(category, searchTerm); 
     if(loading){
@@ -49,7 +49,7 @@ const NewsList = (props) =>{
         <CustomPagination 
          currentPage={currentPage} 
          totalPages={totalPages}
-         handleClick={handleClick}
+         onPageChange={onPageChange}
         />
     </Container>
     );

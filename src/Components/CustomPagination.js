@@ -1,18 +1,22 @@
 import { Pagination } from "react-bootstrap";
 
 function CustomPagination(props) {
-    const {currentPage, totalePages, handleClick} = props;
+    const {currentPage, totalePages, onPageChange} = props;
+
+    const handleNextPrev = (pageNumber) => {
+        onPageChange(pageNumber)
+    }
 
     const renderPageItems = () => {
         const pageItems = [];
 
         for(let i = 1; i <= totalePages; i++){
             pageItems.push(
-                <Pagination key={i} active={i === currentPage} 
-                    onClick = {() => handleClick(i)}
+                <Pagination.Item key={i} active={i === currentPage} 
+                    onClick = {() => onPageChange(i)}
                 >
                     {i}
-                </Pagination>
+                </Pagination.Item>
             );
         };
 
@@ -21,9 +25,13 @@ function CustomPagination(props) {
 
     return <div className="d-flex justify-content-center">
         <Pagination>
-            <Pagination.Prev />
+            <Pagination.Prev disabled={currentPage === 1} 
+                onClick={() => handleNextPrev(currentPage - 1)}
+            />
                 {renderPageItems()}
-            <Pagination.Next />
+            <Pagination.Next disabled={currentPage === totalePages} 
+                onClick={() => handleNextPrev(currentPage + 1)}
+            />
         </Pagination>
     </div>
 }
