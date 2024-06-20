@@ -1,36 +1,22 @@
-import { useEffect, useState } from "react";
 import {Card, Col, Container, Row} from "react-bootstrap";
+import useNewsData from "../hooks/useNewsData";
 
 const NewsList = (props) =>{
     const {category, searchTerm} = props;
 
-    const [news, setNews] = useState([]);
+    const {newsData, loading, error} = useNewsData(category, searchTerm); 
+    if(loading){
+        return <div>Loading...</div>;
+    }
 
-    useEffect( () => {
-        const fetchNews = async () => {
-            let url = "https://gnews.io/api/v4/top-headlines?category=general";
-
-            if(category){
-                url += `&topic=${category}`;
-            }
-            if(searchTerm) {
-                url += `&q=${searchTerm}`;
-            }
-            url += `&token=${process.env.REACT_APP_NEWS_API_KEY}`;
-
-            const response = await fetch(url);
-            const data = await response.json();
-            console.log(data);
-            setNews(data.articles);
-        };
-
-        fetchNews();
-    }, [searchTerm, category]);
+    if(error){
+        return <div>Error: {error.message}</div>;
+    }
 
     return (
         <Container>
         <Row>
-            {news?.map((article) => (
+            {newsData?.map((article) => (
                 <Col xs={12} md={6} lg={4} key={article.url}>
                     <Card>
                        <Card.Img src={article.image} variant="top"/>
