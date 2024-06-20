@@ -16,13 +16,19 @@ import NewsList from "./Components/NewsList";
 
 function App() {
 
-  const [category, seCategory] = useState("");
+  const [category, setCategory] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleCategoryClick = (category) => {
-    seCategory(category)
+    setCategory(category)
     setSearchTerm("");
   };
+
+  const handleSearch = (event) =>{
+    event.preventDefault();
+    setCategory("");
+    setSearchTerm(event.target.search.value);
+  }
 
   return (
     <>
@@ -54,10 +60,10 @@ function App() {
 
             </Nav>
 
-            <Form className="d-flex">
+            <Form onSubmit={handleSearch} className="d-flex">
               <FormControl type="text" placeholder="search" className="me-2" name="search" />
 
-              <Button variant="outline-primary" type="submit">Submit</Button>
+              <Button variant="outline-primary" type="submit">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>
