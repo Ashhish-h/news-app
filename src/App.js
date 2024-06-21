@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import logo from "./assets/logo.png";
 
 import {
   Row,
@@ -35,7 +36,9 @@ function App() {
     <>
       <Navbar bg="light" expand="lg" className="mb-4 custom-navbar">
         <Container>
-          <Navbar.Brand href="/" className="fw-bold fs-4">News-App</Navbar.Brand>
+          <Navbar.Brand href="/" className="fw-bold fs-4 align-items-center">
+          <img href="/" src={logo} alt="Logo" className="logo" />
+          </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="navbar-nav" />
 

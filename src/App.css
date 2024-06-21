@@ -13,7 +13,21 @@
 }
 
 .custom-navbar .navbar-brand {
+  display: flex;
+  align-items: center;
   color: white;
+  cursor: pointer;
+}
+
+.custom-navbar .navbar-brand .logo {
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 100%;
+  transition: transform 0.3s;
+}
+
+.custom-navbar .navbar-brand:hover .logo {
+  transform: scale(1.1);
 }
 
 .custom-navbar .navbar-toggler,
