@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import useNewsData from "../hooks/useNewsData";
 import CustomPagination from "./CustomPagination";
+import "../App.css";
 
 const NewsList = (props) =>{
     const {category, searchTerm} = props;
@@ -12,7 +13,7 @@ const NewsList = (props) =>{
 
     const {newsData, loading, error} = useNewsData(category, searchTerm); 
     if(loading){
-        return <div>Loading...</div>;
+        return <div className="text-center mt-5 loading-animation"></div>;
     }
 
     if(error){
@@ -50,7 +51,7 @@ const NewsList = (props) =>{
             ))}
         </Row>
 
-            
+
         <CustomPagination 
          currentPage={currentPage} 
          totalPages={totalPages}

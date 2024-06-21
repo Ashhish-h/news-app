@@ -159,6 +159,31 @@
   color: white;
 }
 
+/* Loading Animation  */
+.loading-animation::after {
+  content: "Loading";
+  animation: dots 1.5s infinite;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes dots {
+  0%, 20% {
+      content: "Loading";
+  }
+  40% {
+      content: "Loading.";
+  }
+  60% {
+      content: "Loading..";
+  }
+  80%, 100% {
+      content: "Loading...";
+  }
+}
+
+
 .App-link {
   color: #61dafb;
 }
