@@ -48,13 +48,13 @@ function App() {
                 <Dropdown.Menu>
                   <Dropdown.Item onClick={() => handleCategoryClick("world")}>World</Dropdown.Item>
 
-                  <Dropdown.Item onClick={() => handleCategoryClick("business")}>business</Dropdown.Item>
+                  <Dropdown.Item onClick={() => handleCategoryClick("business")}>Business</Dropdown.Item>
 
-                  <Dropdown.Item onClick={() => handleCategoryClick("technology")}>technology</Dropdown.Item>
+                  <Dropdown.Item onClick={() => handleCategoryClick("technology")}>Technology</Dropdown.Item>
 
-                  <Dropdown.Item onClick={() => handleCategoryClick("sports")}>sports</Dropdown.Item>
+                  <Dropdown.Item onClick={() => handleCategoryClick("sports")}>Sports</Dropdown.Item>
 
-                  <Dropdown.Item onClick={() => handleCategoryClick("entertainment")}>entertainment</Dropdown.Item>
+                  <Dropdown.Item onClick={() => handleCategoryClick("entertainment")}>Entertainment</Dropdown.Item>
 
                 </Dropdown.Menu>
               </Dropdown>
@@ -75,15 +75,15 @@ function App() {
           <Col xs={12} md={3} className="custom-sidebar-container">
             <h5 className="category-title">Categories</h5>
             <Nav className="flex-column custom-sidebar">
-              <Nav.Link onClick={() => handleCategoryClick("world")}>world</Nav.Link>
+              <Nav.Link onClick={() => handleCategoryClick("world")}>World</Nav.Link>
 
-              <Nav.Link onClick={() => handleCategoryClick("business")}>business</Nav.Link>
+              <Nav.Link onClick={() => handleCategoryClick("business")}>Business</Nav.Link>
 
-              <Nav.Link onClick={() => handleCategoryClick("technology")}>technology</Nav.Link>
+              <Nav.Link onClick={() => handleCategoryClick("technology")}>Technology</Nav.Link>
 
-              <Nav.Link onClick={() => handleCategoryClick("sports")}>sports</Nav.Link>
+              <Nav.Link onClick={() => handleCategoryClick("sports")}>Sports</Nav.Link>
 
-              <Nav.Link onClick={() => handleCategoryClick("entertainment")}>entertainment</Nav.Link>
+              <Nav.Link onClick={() => handleCategoryClick("entertainment")}>Entertainment</Nav.Link>
             </Nav>   
           </Col>
           <Col xs={12} md={9}>
