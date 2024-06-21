@@ -43,7 +43,7 @@ function App() {
             <Nav className="me-auto">
 
               <Dropdown>
-                <Dropdown.Toggle variant="navbar-toggler" className="custom-dropdown">Categories</Dropdown.Toggle>
+                <Dropdown.Toggle  className="custom-dropdown">Categories</Dropdown.Toggle>
 
                 <Dropdown.Menu>
                   <Dropdown.Item onClick={() => handleCategoryClick("world")}>World</Dropdown.Item>
