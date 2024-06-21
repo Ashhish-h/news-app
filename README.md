@@ -16,21 +16,22 @@ Technologies Used
     React Router: Used for handling navigation and routing within the single-page application.
 
 Code Structure:
-news-app/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── CustomPagination.js
-│   │   └── NewsList.js
-│   ├── hooks/
-│   │   └── useNewsData.js
-│   ├── App.js
-│   ├── index.js
-│   └── styles/
-│       └── NewsList.css
-├── package.json
-└── README.md
+
+            news-app/
+            ├── public/
+            │   └── index.html
+            ├── src/
+            │   ├── components/
+            │   │   ├── CustomPagination.js
+            │   │   └── NewsList.js
+            │   ├── hooks/
+            │   │   └── useNewsData.js
+            │   ├── App.js
+            │   ├── index.js
+            │   └── styles/
+            │       └── NewsList.css
+            ├── package.json
+            └── README.md
 
 
 Getting Started
