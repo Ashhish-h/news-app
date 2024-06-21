@@ -44,6 +44,9 @@ To run this project locally, follow these steps:
     Start Development Server: npm start
     Open your browser and navigate to http://localhost:3000 to view the app.
 
+## Deployment
+    https://newshub-ashhish-h.netlify.app/
+    
 ## Usage
 
     Upon launching the app, you will see a list of recent news articles fetched from the API.
