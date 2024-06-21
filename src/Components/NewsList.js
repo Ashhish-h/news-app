@@ -6,7 +6,7 @@ import CustomPagination from "./CustomPagination";
 const NewsList = (props) =>{
     const {category, searchTerm} = props;
     const [currentPage, setCurrentPage] = useState(1);
-    const pageSize = 4;
+    const pageSize = 9;
 
     const onPageChange = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -29,21 +29,21 @@ const NewsList = (props) =>{
         <Container>
         <Row>
             {currentArticle?.map((article) => (
-                <Col xs={12} md={6} lg={4} key={article.url}>
-                    <Card>
+                <Col xs={12} md={6} lg={4} key={article.url} className="d-flex">
+                    <Card className="custom-card flex-grow-1">
                        <Card.Img src={article.image} variant="top"/>
 
-                       <Card.Body>
+                       <Card.Body className="d-flex flex-column">
                             <Card.Title>{article.title}</Card.Title>
 
                             <Card.Text>{article.description}</Card.Text>
 
-                            <Card.Link href={article.url}>Read More</Card.Link>
+                            <Card.Link href={article.url} className="btn btn-primary mt-auto">Read More</Card.Link>
                        </Card.Body>
 
                     </Card>
                 </Col>
-            ))};
+            ))}
         </Row>
 
         <CustomPagination 
