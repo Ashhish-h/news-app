@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 
 import {
   Row,
@@ -32,7 +33,7 @@ function App() {
 
   return (
     <>
-      <Navbar bg="light" expand="lg" className="mb-4">
+      <Navbar bg="light" expand="lg" className="mb-4 custom-navbar">
         <Container>
           <Navbar.Brand href="/" className="fw-bold fs-4">News-App</Navbar.Brand>
 
@@ -42,7 +43,7 @@ function App() {
             <Nav className="me-auto">
 
               <Dropdown>
-                <Dropdown.Toggle variant="outline-primary">Categories</Dropdown.Toggle>
+                <Dropdown.Toggle variant="navbar-toggler" className="custom-dropdown">Categories</Dropdown.Toggle>
 
                 <Dropdown.Menu>
                   <Dropdown.Item onClick={() => handleCategoryClick("world")}>World</Dropdown.Item>
@@ -61,9 +62,9 @@ function App() {
             </Nav>
 
             <Form onSubmit={handleSearch} className="d-flex">
-              <FormControl type="text" placeholder="search" className="me-2" name="search" />
+              <FormControl type="text" placeholder="search" className="me-2 custom-search" name="search" />
 
-              <Button variant="outline-primary" type="submit">Search</Button>
+              <Button className="btn btn-primary" type="submit">Search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>
@@ -71,9 +72,9 @@ function App() {
 
       <Container>
         <Row>
-          <Col xs={12} md={3}>
-            <h5>Categories</h5>
-            <Nav className="flex-column">
+          <Col xs={12} md={3} className="custom-sidebar-container">
+            <h5 className="category-title">Categories</h5>
+            <Nav className="flex-column custom-sidebar">
               <Nav.Link onClick={() => handleCategoryClick("world")}>world</Nav.Link>
 
               <Nav.Link onClick={() => handleCategoryClick("business")}>business</Nav.Link>
