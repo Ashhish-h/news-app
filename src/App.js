@@ -47,7 +47,7 @@ function App() {
 
               <Dropdown>
                 <Dropdown.Toggle  className="custom-dropdown">Categories</Dropdown.Toggle>
-
+                {/* Dropdown menu */}
                 <Dropdown.Menu>
                   <Dropdown.Item onClick={() => handleCategoryClick("world")}>World</Dropdown.Item>
 
@@ -75,6 +75,7 @@ function App() {
 
       <Container>
         <Row>
+          {/* Category section */}
           <Col xs={12} md={3} className="custom-sidebar-container">
             <h5 className="category-title">Categories</h5>
             <Nav className="flex-column custom-sidebar">
@@ -88,7 +89,8 @@ function App() {
 
               <Nav.Link onClick={() => handleCategoryClick("entertainment")}>Entertainment</Nav.Link>
             </Nav> 
-
+            
+            {/* Contact us section */}
             <div className="contact-us mt-4">
               <h5 className="contact-title">Contact Us</h5>
               <Form>
@@ -107,7 +109,7 @@ function App() {
                 <Button className="mt-3" variant="primary" type="submit">Submit</Button>
               </Form>
             </div>
-            
+
           </Col>
           <Col xs={12} md={9}>
             <NewsList category={category} searchTerm={searchTerm} />

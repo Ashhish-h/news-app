@@ -19,11 +19,15 @@ const NewsList = (props) =>{
         return <div>Error: {error.message}</div>;
     }
 
+    // page slider
+
     const totalArticles = newsData.length;
     const totalPages = Math.ceil(totalArticles / pageSize);
     const startIndex = (currentPage - 1) * pageSize;
     const endIndex = (startIndex + pageSize);
     const currentArticle = newsData.slice(startIndex, endIndex);
+
+    // returns cards that contain news infromation
 
     return (
         <Container>
@@ -46,6 +50,7 @@ const NewsList = (props) =>{
             ))}
         </Row>
 
+            
         <CustomPagination 
          currentPage={currentPage} 
          totalPages={totalPages}

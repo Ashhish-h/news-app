@@ -1,3 +1,5 @@
+// custom hook for fetching the data from the api and returning it to the NewsList component
+
 import { useState, useEffect } from 'react';
 
 const useNewsData = (category, searchTerm) => {
