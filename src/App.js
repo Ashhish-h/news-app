@@ -87,7 +87,27 @@ function App() {
               <Nav.Link onClick={() => handleCategoryClick("sports")}>Sports</Nav.Link>
 
               <Nav.Link onClick={() => handleCategoryClick("entertainment")}>Entertainment</Nav.Link>
-            </Nav>   
+            </Nav> 
+
+            <div className="contact-us mt-4">
+              <h5 className="contact-title">Contact Us</h5>
+              <Form>
+                <Form.Group controlId="formName">
+                  <Form.Label>Name</Form.Label>
+                  <Form.Control type="text" placeholder="Enter your name" />
+                </Form.Group>
+                <Form.Group controlId="formEmail" className="mt-3">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control type="email" placeholder="Enter your email" />
+                </Form.Group>
+                <Form.Group controlId="formMessage" className="mt-3">
+                  <Form.Label>Message</Form.Label>
+                  <Form.Control as="textarea" rows={3} placeholder="Enter your message" />
+                </Form.Group>
+                <Button className="mt-3" variant="primary" type="submit">Submit</Button>
+              </Form>
+            </div>
+            
           </Col>
           <Col xs={12} md={9}>
             <NewsList category={category} searchTerm={searchTerm} />

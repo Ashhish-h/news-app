@@ -85,6 +85,37 @@
   color: white;
 }
 
+/* Contact Us Section Styles */
+.contact-us {
+  background-color: #fcebeb; /* Darken the background */
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #6a11cb;;
+  font-weight: bold;
+}
+
+.contact-title {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #6a11cb;
+}
+
+.contact-us .form-control {
+  border-radius: 4px;
+}
+
+.contact-us .btn-primary {
+  background-color: #6a11cb;
+  border-color: #6a11cb;
+}
+
+.contact-us .btn-primary:hover {
+  background-color: #4b0a8a;
+  border-color: #4b0a8a;
+}
+
+
 /* Card Styles */
 .custom-card {
   display: flex;
